@@ -1,0 +1,91 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #eef9bf;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 10px;
+    
+  }
+
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #75B79E;
+    font-family: "Roboto";
+    font-size: 56px;
+    text-align: center;
+  
+    }
+  
+  #game-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .card {
+    width: 117px;
+    height: 146px;
+    perspective: 1000px; 
+    cursor: pointer;
+       
+
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1); 
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg); 
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .card-front {
+    background-color:#A7E9AF; 
+  }
+  
+  .card-back {
+    background-color: #A7E9AF; 
+    transform: rotateY(180deg); 
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media screen and (max-width: 768px){
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px){
+  h1 {
+      font-size: 20px;
+  }
+}
